@@ -6,6 +6,8 @@ sed -i "s/'quakejs:/window.location.hostname + ':/g" index.html
 
 sed -i "s/':80'/':${HTTP_PORT}'/g" index.html
 
+sed -i "s|':27960'|'/socket'|g" index.html
+
 /etc/init.d/apache2 start
 
 cd /quakejs
